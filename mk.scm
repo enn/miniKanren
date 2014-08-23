@@ -750,11 +750,6 @@
   (lambda (x y)
     (string<=? (datum->string x) (datum->string y))))
 
-(define datum->string
-  (lambda (x)
-    (call-with-string-output-port
-      (lambda (p) (display x p)))))
-
 (define-syntax project
   (syntax-rules ()
     ((_ (x ...) g g* ...)
